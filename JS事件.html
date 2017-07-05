@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+	<!--button 按钮-->
+	<button onclick="fun()">按钮1</button>
+	<button>按钮2</button>
+	<!--JS程序来实现按钮的点击功能-->
+	<script>
+	//function定义一个功能用来执行
+		function fun(){ 
+			alert("点我干嘛?");
+		}
+		//得到按钮元素(通过标签得到),按钮的编号从0开始
+		var btns = document.getElementsByTagName("button");
+		//btns[1]代表第二个按钮,onclick代表点击事件来执行fun()的功能
+		btns[1].onclick = fun;
+	</script>
+ </body>
+</html>
