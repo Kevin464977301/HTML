@@ -12,16 +12,34 @@
 	<!--button 按钮-->
 	<button onclick="fun()">按钮1</button>
 	<button>按钮2</button>
+	<button>按钮3</button>
+	<button>按钮4</button>
+	<button>按钮5</button>
+	<button>按钮6</button>
 	<!--JS程序来实现按钮的点击功能-->
 	<script>
 	//function定义一个功能用来执行
 		function fun(){ 
 			alert("点我干嘛?");
 		}
+		function func(e){
+			//e.target.innerHTML获取点击按钮中的内容
+			//alert(e.target.innerHTML);
+			if(e.target.innerHTML == "按钮3"){
+				alert("你中奖了!");
+			}
+			else if (e.target.innerHTML == "按钮4"){
+				alert("再接再厉!");
+			}
+		}
 		//得到按钮元素(通过标签得到),按钮的编号从0开始
 		var btns = document.getElementsByTagName("button");
 		//btns[1]代表第二个按钮,onclick代表点击事件来执行fun()的功能
 		btns[1].onclick = fun;
+		btns[2].onclick = func;
+		btns[3].onclick = func;
+		btns[4].onclick = func;
+		btns[5].onclick = func;
 	</script>
  </body>
 </html>
