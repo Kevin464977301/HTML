@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				color:red;
+			}
+			html,body{
+				height:100%;
+			}
+			.box{
+				height:200px;
+				background-color:red;
+			}
+			/*权重是一样的body .box  和p.box*/
+			/* body .box{
+				height:300px;
+				background-color:red;
+			} */
+			p.box{
+				background-color:yellow;
+			}
+			p{
+				color:blue;
+				margin-top:50px;
+			}
+			#boxBorder{
+				margin:5px;
+				width:300px;
+				height:300px;
+				border-top:20px double #abcdef;
+				border-left:20px double red;
+				border-right:20px double yellow;
+				border-bottom:20px double green;
+			}
+			#boxBorder:hover,#boxBorderFather:hover{
+				border-color:red;
+			}
+			#boxBorderFather{
+				width:350px;
+				margin:20px auto;
+				/*20px 线的宽度  double 双倍线*/
+				border-top:20px double #abcdef;
+				border-left:20px double red;
+				border-right:20px double yellow;
+				border-bottom:20px double green;
+			}
+			#boxTwo{
+				/*如果宽和高不设为0,则中间会有小块空白*/
+				width:0; 
+				height:0;
+				margin:20px auto;
+				/*transparent 透明的边款*/
+				border:200px solid transparent;
+				/*四个不同颜色的三角形*/
+				border-bottom-color:black;
+				border-top-color:yellow;
+				border-left-color:red;
+				border-right-color:green;
+				border-radius:10%;
+			}
+			#boxThree{
+				margin:20px auto;
+				width:600px;
+				height:300px;
+				background-color:red;
+				/*a-h  属性值   a    b  e f/  h   c   b g*/
+				border-radius:100% 100% 0 0/200% 200% 0 0;
+			}
+			.eyes{
+				width:600px;
+				height:300px;
+				border:5px double black;
+				box-shadow:3px 3px 5px 10px #ccc;
+				overflow:hidden;
+				margin-left:20px;
+				margin-bottom:20px;
+				float:left;
+			}
+			#eyesleft{
+				border-radius:10% 100% 10% 100%/20% 200% 20% 200%;
+			}
+			#eyesright{
+				border-radius:100% 10% 100% 10%/200% 20% 200% 20%;
+			}
+			.eyes div{
+				width:200px;
+				height:200px;
+				background-color:black;
+				border-radius:50%;
+				margin:50px auto;
+			}
+			nav{
+				width:100%;
+				height:100px;
+				overflow:hidden;
+				/*阴影  x水平偏移量  y水平偏移量 模糊半径 扩散半径 */
+				box-shadow:0px 5px 10px 0px #ccc;
+			}
+			section{
+				width:100%;
+				background-color:#ffffff;
+				margin:auto;
+				height:100px;
+			}
+			#borderImg{
+				width:200px;
+				height:200px;
+				border:20px solid #ccc;
+				/*边款图片拉伸  27是图片的宽度    拉伸 */
+				border-image:url(images/border.png) 27 stretch;
+				margin:400px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<section></section>
+		</nav>
+		<p class="box">123</p>
+		<div id="boxBorderFather">
+			<div id="boxBorder">123</div>
+		</div>
+		<div id="boxTwo"></div>
+		<div id="boxThree"></div>
+		<div id="eyesleft" class="eyes">
+			<div></div>
+		</div>
+		<div id="eyesright" class="eyes">
+			<div></div>
+		</div>
+		<div id="borderImg"></div>
+	</body>
+</html>
