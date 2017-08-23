@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			/*去掉标识符号*/
+			li{
+				list-style:none;
+			}
+			a{
+				/*去掉下划线,默认是underline*/
+				text-decoration:none;
+				/*设置字体颜色*/
+				color:#6c6c6c;
+			}
+			/*定义id的属性*/
+			#nav-list-section{
+				width:150px;
+				height:50px;
+				font-size:12px;
+			}
+			/*定义id中a标签的属性*/
+			#nav-list-section>a{
+				width:150px;
+				height:50px;
+				display:block;
+				text-align:center;
+				line-height:50px;
+				background:url(images/select.png)no-repeat 120px center;
+				background-size:10%;
+			}
+			/*当鼠标移到a标签时改变背景色*/
+			#nav-list-section>a:hover{
+				background-color:black;
+				color:red;
+			}
+			/*定义id中ul标签的属性*/
+			#nav-list-section ul{
+				display:none;
+				padding:10px 0;
+			}
+			/*定义id中ul中的li标签属性*/
+			#nav-list-section ul li{
+				text-align:center;
+				line-height:35px;
+			}
+			/*当鼠标经过id中ul中的li标签的时候改变背景色*/
+			#nav-list-section ul li:hover{
+				background:#eee;
+			}
+			/*当鼠标经过id的时候显示ul中的内容*/
+			#nav-list-section:hover ul{
+				display:block;
+			}
+			/*=======京东注册========*/
+			form{
+				width:800px;
+				margin:auto;
+			}
+			.ipt-box{
+				width:798px;
+				height:105px;
+				border:1px solid #ddd;
+				margin-top:64px;
+			}
+			.ipt-box span{
+				width:170px;
+				height:105px;
+				margin-left:40px;
+				float:left;
+				line-height:105px;
+				font-size:26px;
+			}
+			.thre span{letter-spacing:27px;}
+			.fur span{letter-spacing:10px;}
+			.ipt-box input{
+				width:440px;
+				height:105px;
+				float:left;
+				font-size:28px;
+				line-height:105px;
+				border:0;
+			}
+			form p{text-align:right;font-size:28px;}
+			form p a{color:#3388ff;}
+			.ipt-box .small{width:300px;}
+			.ipt-box a{
+				width:220px;
+				height:92px;
+				text-align:center;
+				line-height:92px;
+				margin:8px;
+				float:right;
+				background:#eee;
+				font-size:22px;
+			}
+			.iagree{
+				text-align:left;
+				font-size:22px;
+				line-height:22px;
+				margin:70px 0;
+			}
+			form>input{
+				width:798px;
+				height:105px;
+				background-image:linear-gradient(to top,#e92121,#ee2222 70%);
+				color:#fff;
+				font-size:32px;
+			}
+			#ckbox{
+				width:22px;
+				height:22px;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav-list-section">
+			<a href="#">卖家中心</a>
+			<ul>
+				<li><a href="#">免费开店</a></li>
+				<li><a href="#">已卖出的宝贝</a></li>
+				<li><a href="#">出售中的宝贝</a></li>
+				<li><a href="#">卖家服务市场</a></li>
+				<li><a href="#">卖家培训中心</a></li>
+				<li><a href="#">体检中心</a></li>
+				<li><a href="#">问商友</a></li>
+			</ul>
+		</div>
+		<form>
+			<div class="ipt-box thre">
+				<span>用户名</span>
+				<input placeholder="您的账户和登录名" />
+			</div>
+			<div class="ipt-box fur">
+				<span>设置密码</span>
+				<input type="password" placeholder="建议至少使用两种字符组合" />
+			</div>
+			<div class="ipt-box fur">
+				<span>确认密码</span>
+				<input type="password" placeholder="请再次输入密码" />
+			</div>
+			<div class="ipt-box fur">
+				<span>手机验证</span>
+				<input placeholder="建议使用常用手机" />
+			</div>
+			<p>或<a href="#">邮箱验证</a></p>
+			<div class="ipt-box thre" style="margin-top:31px;" >
+				<span>验证码</span>
+				<input class="small" placeholder="请输入验证码" />
+				<a href="#"></a>
+			</div>
+			<div class="ipt-box">
+				<span>手机验证码</span>
+				<input class="small" placeholder="请输入手机验证码" />
+				<a href="#">获取验证码</a>
+			</div>
+			<p class="iagree">
+				<input type="checkbox" id="ckbox" />
+				<label for="ckbox" style="margin-left:10px;">我已阅读并同意</label>
+				<a href="#">《京东用户注册协议》</a>
+			</p>
+			<input type="submit" value="立即注册" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>转盘抽奖</title>
+    <!-- 在这里定义样式，用于设置盒子的宽度、高度等 -->
+  <style>
+	
+	/* 定义样式，名字叫 bj。【注意】前面有小点 */
+	.bj {
+		/*宽度： 500像素*/
+		width: 500px;
+
+		/*高度： 500像素*/
+		height: 500px;
+
+		/*背景图片： a目录下面的bj.png这张图片*/
+		background-image: url(choujiang/zhuanpan.png);
+
+
+		/* 设置盒子采用绝对定位 */
+		position: absolute;
+		
+		/* 相当于根据左上点进行定位 */
+		/* 左边为 0 */
+		left: 0px;
+		/* 上边为 0 */
+		top: 0px;
+
+		/* transform: 代表变形
+				rotate  旋转，顺时针旋转
+					45deg 代表 旋转45度，如果想逆时针45度，可以写成 -45度
+		*/
+		transform: rotate(45deg);
+	}
+
+	/* 定义样式 zz */
+	.zz {
+		/*宽度： 500像素*/
+		width: 500px;
+
+		/*高度： 500像素*/
+		height: 500px;
+
+		/*背景图片： a目录下面的zz.png这张图片*/
+		background-image: url(choujiang/zhizhen.png);
+
+
+		/* 设置盒子采用绝对定位 */
+		position: absolute;
+		
+		/* 相当于根据左上点进行定位 */
+		/* 左边为 0 */
+		left: 0px;
+		/* 上边为 0 */
+		top: 0px;
+	}
+
+  </style>
+
+ </head>
+ <body>
+  
+	 <!-- 注释： 计算机会忽略不计的
+		div 代表定义一个盒子，用来装东西的
+
+		class="bj" 意思是 将上面定义好的样式 bj 作用在盒子上面（相当于设置了宽高、背景图片）
+
+		id="a" 代表给当前盒子起个名字 叫 a，为了给程序用的
+	 -->
+     <div class="bj" id="a"></div>
+
+	 <!-- 定义盒子，用于放指针的 -->
+	 <div class="zz"> </div>
+
+	
+	 <!-- 在这里写程序，script是国际委员会规定 -->
+	 <script>
+	
+	 // 为了让盒子旋转
+
+	 // 1. 先得到盒子
+	 //    document.getElementById("a") 找到 id=a 的元素
+	 //    var b  代表定义一个空间，用于存储 a 这个元素，b是这个空间的名字
+	 var b = document.getElementById("a");
+
+	 //   定义1个空间 d，存储当前转盘转的角度 
+	 var d = 0;
+
+	 // 2. 让盒子自动转，我们需要有个定时器，每隔一段时间自动执行
+	 //   创建定时器
+	 setInterval(function() {
+		 // 每隔一段时间，执行这里
+		 //   角度，每次增加45度
+		 // d = d + 45;
+		 d = d + 5;
+
+		 // 将当前角度 设置到盒子中
+		 b.style.transform = "rotate(" + d + "deg)";
+
+		
+
+		// 1000 代表 1000 毫秒，所以相当于 1秒
+	 }, 10);
+
+	 </script>
+ </body>
+</html>

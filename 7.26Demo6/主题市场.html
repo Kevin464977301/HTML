@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				text-decoration:none;
+				list-style:none;
+			}
+			ul{
+				position:relative;
+			}
+			li{
+				width:200px;
+				height:30px;
+				background:red;
+			}
+			li:hover{
+				background:white;
+			}
+			li:hover .box{
+				display:block;
+			}
+			li .a{
+				width:200px;
+				height:30px;
+				line-height:30px;
+			}
+			.box{
+				width:300px;
+				height:300px;
+				background:green;
+				display:none;
+				position:absolute;
+				top:0px;
+				left:200px;
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<div class="a">女装/男装/内衣</div>
+				<div class="box">11111111111111</div>
+			</li>
+			<li>
+				<div class="a">鞋靴/箱包/配件</div>
+				<div class="box">222222222222222222121111111111111111111</div>
+			</li>
+			<li>
+				<div class="a">童装玩具/孕产用品</div>
+				<div class="box">33333333333333311111111111111111111111</div>
+			</li>
+			<li>
+				<div class="a">加点/数码/手机</div>
+				<div class="box">444444444444444444</div>
+			</li>
+			<li>
+				<div class="a">美妆/洗护/保健品</div>
+				<div class="box">5555555555555555555555</div>
+			</li>
+			<li>
+				<div class="a">女装/男装/内衣</div>
+				<div class="box">66666666666666666666666</div>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			/*可设置固定宽高让其不变形*/
+			
+			span{float:left;width:200px;height:200px;background-color:red;}
+			#box{
+				width:200px;
+				height:200px;
+				background:pink;
+				position:absolute;
+				/*left则会挡住123,使用margin-left则boxx所有元素都会往右移*/
+				left:100px;
+				/*margin-left:100px;*/
+			}
+			.boxx{float:left;}
+			#alt{
+				width:100px;
+				height:100px;
+				background:black;
+				position:absolute;
+				left:30px;
+				top:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span style="clear:both;">1</span>
+			123
+		</div>
+		<div style="clear:both;"></div>
+		<div id="box" class="boxx">
+			<i id="alt"></i>
+		</div>
+		<div class="boxx">123</div>
+	</body>
+</html>

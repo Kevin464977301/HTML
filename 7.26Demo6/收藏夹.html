@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			/* 第一种方法加小白块 */
+			/* *{margin:0;padding:0;text-decoration:none;list-style:none;}
+			div{width:200px;height:50px;position:relative;}
+			a{display:block;width:200px;height:48px;text-align:center;line-height:50px;
+				border:1px solid #ccc;
+			}
+			ul{position:absolute;width:250px;border:1px solid #ccc;top:50px;left:0px;}
+			i{position:absolute;width:200px;height:2px;background:#fff;top:49px;left:1px;z-index:99;} */
+			/*第二种不加小白块*/
+			*{margin:0;padding:0;text-decoration:none;list-style:none;}
+			div{width:200px;height:50px;position:relative;}
+			/* z-index必须要和position一起使用,改变层次 */
+			a{display:block;width:200px;height:48px;text-align:center;line-height:50px;
+				border:1px solid #ccc;border-bottom-color:#fff;position:relative;z-index:9;
+			}
+			ul{position:absolute;text-align:center;width:150px;border:1px solid #ccc;top:49px;left:0px;background:#fff;z-index:2;}
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<!-- <a href="#">收藏夹</a>
+			<i></i>
+			<ul>
+				<li>收藏宝贝</li>
+				<li>收藏店铺</li>
+			</ul> -->
+			<!--加p的情况-->
+			<a href="#">收藏夹</a>
+			<i></i>
+			<ul>
+				<li>收藏宝贝</li>
+				<li>收藏店铺</li>
+			</ul>
+		</div>
+		<p style="height:500px;background:red"></p>
+	</body>
+</html>

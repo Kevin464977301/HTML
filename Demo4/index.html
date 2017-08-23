@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>百度一下,你就知道</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				width:100%;
+				height:200vh;
+			}
+			body{
+				/*设置背景图片*/
+				background-image:url("images/12.jpg");
+				/*图片重复属性:不重复,仅显示一次*/
+				background-repeat:no-repeat;
+				/*扩大背景图片,contain碰到第一个边缘时停止;cover碰到最后一个边缘时停止*/
+				background-size:100%;
+				/*图片定位:不仅能设置水平和垂直居中,还能设置距离左和上的位置*/
+				/*background-position:center top;*/
+				/*设置背景图是否跟随页面的滚动而滚动,默认是scroll(滚动的)*/
+				background-attachment:fixed;
+			}
+			/* div{
+				width:100%;
+				height:100px;
+				background-color:#ddd;
+				background-image:url("images/select.png");
+				background-repeat:no-repeat;
+				background-position:center 85px;
+				box-shadow:12px 12px 10px 10px orange;
+			} */
+			.index,.wx-school,.open,.intel-school,.yx-school,.game{
+				height:78px;
+			}
+			.index:hover,.wx-school:hover,.open:hover,.intel-school:hover,.yx-school:hover,.game:hover{
+				background-image:url(images/nav-on.png);
+			}
+			.index{
+				width:98px;
+				background:url(images/nav.png) no-repeat;
+			}
+			.wx-school{
+				width:122px;
+				background:url(images/nav.png) no-repeat -100px;
+			}
+			.open{
+				width:144px;
+				background:url(images/nav.png) no-repeat -224px;
+			}
+			.intel-school{
+				width:118px;
+				background:url(images/nav.png) no-repeat -370px;
+			}
+			.yx-school{
+				width:122px;
+				background:url(images/nav.png) no-repeat -490px;
+			}
+			.game{
+				width:122px;
+				background:url(images/nav.png) no-repeat -614px;
+			}
+			button{
+				width:300px;
+				height:100px;
+			}
+			.jb{
+				background-image:rpeating-linear-gradient(30deg,black 2px,#fff 10px);
+			}
+			div{
+				width:500px;
+				height:300px;
+				background-image:-webkit-radial-gradient(left top,circle,black,red);
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<section class="index"></section>
+		<section class="wx-school"></section>
+		<section class="open"></section>
+		<section class="intel-school"></section>
+		<section class="yx-school"></section>
+		<section class="game"></section>
+		<button class="jb">口一下</button>
+		<button></button>
+	</body>
+</html>

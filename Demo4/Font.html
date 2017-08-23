@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Font</title>
+		<style>
+			*{margin:0;padding:0;}
+			body{font-family:shiguang;font-size:20px;}
+			span{
+				font-size:3em;
+				/* 字体加粗 */
+				font-weight:bold;
+				/* 字体样式 */
+				font-style:italic;
+				/* 小写英文字母大写化 */
+				font-variant:small-caps;
+			}
+			b{font-size:10px;font-weight:100;}
+			/*引入字体  */
+			/* @font-face{
+				font-family:shiguang;
+				src:url(fonts/xiamiyinle_gaoji.ttf);
+			} */
+			div{
+				width:100px;
+				height:100px;
+				background:green;
+				/* 文本对齐方式 */
+				text-align:center;
+				/* 行高 */
+				line-height:50px;
+			}
+			a{
+				/*去掉下划线,默认是underline*/
+				text-decoration:none;
+			}
+			a:hover{
+				/* 鼠标经过是显示上划线 */
+				text-decoration:overline;
+			}
+			p{
+				width:100%;
+				/*行高*/
+				line-height:40px;
+				/*首行文本缩进,value代表距离*/
+				text-indent:2em;
+				/*文本阴影 水平 垂直 距离 颜色*/
+				text-shadow:0px 2px 2px red;
+				/*长单词换行,默认是normal,break-word:破坏单词的结构*/
+				word-wrap:break-word;
+				/*字符间距*/
+				letter-spacing:20px;
+			}
+			h1{
+				width:410px;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				user-select:none;
+			}
+			table{
+				width:300px;
+				height:300px;
+				border:1px solid red;
+				border-collapse:collapse;
+			}
+			td{
+				border:1px solid red;
+			}
+			caption{
+				caption-side:bottom;
+			}
+			li{
+				/* 取消列表标识 */
+				list-style-type:none;
+				/* 标识的位置 outside:默认值,标识在外  inside:标识在内 */
+				list-style-position:inside;
+			}
+			li{
+				list-style-image:url("images/select.png");
+			}
+			.sp{
+				width:300px;
+				height:300px;
+				background:red;
+				/* 让一个span行级元素转变为块级元素, inline块级元素转变为行级元素 */
+				display:inline-block;
+				/* 设置透明度 */
+				opacity:0.5;
+			}
+			input{
+				border:0;
+				outline:none;
+			}
+		</style>
+	</head>
+	<body>
+		全场<span>10元</span><b>起</b>
+		<div>点我</div>
+		<a href="#">百度一下,你就知道,什么是强</a>
+		<p>在那一片投射着被柳树枝叶切割而开的明亮光斑的空地中，数百道身影静静盘坐，这是一群略显青涩的少年少女，而此时，他们都是面目认真的微闭着双目，鼻息间的呼吸，呈现一种极有节奏之感，而随着呼吸的吐纳，他们的周身，仿佛是有着肉眼难辨的细微光芒出现。</p>
+		<h1>湖南大规模出现高温天气,局部地区将达到41度</h1>
+		<p>My father was a self-taught mandolin player. He was one of the best string instrument players in our town. He could not read music, but if he heard a tune a few times, he could play it.</p>
+		<table>
+			<caption>表格标题</caption>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<ul>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+			<li>1</li>
+		<ul>
+		<span class="sp"></span><span class="sp"></span><span class="sp"></span>
+		<img src="images/2.jpg" style="vertical-align:middle;"/>汪
+		<input/>
+	</body>
+</html>
