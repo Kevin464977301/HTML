@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			
+			span{position:absolute;width:100px;height:200px;background:red;}
+			#box{
+				width:100px;height:200px;
+				background:greenyellow;
+				position:absolute;
+				left:100px;
+			}
+			.boxx{float:left;}
+			#alt{
+				width:100px;height:100px;
+				background:black;
+				position:absolute;
+				left:30px;
+				top:30px;
+			}
+			button{position:fixed;right:100px;bottom:100px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span>1</span>
+			<span>2</span>
+			<span style="z-index:2;">3</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+		<div style="clear:both;"></div>
+		<div id="box" class="boxx">
+			<i id="alt"></i>
+		</div>
+		<div style="height:10000px;"></div>
+		<div class="boxx">123</div>
+		<button>回到顶部</button>
+	</body>
+</html>

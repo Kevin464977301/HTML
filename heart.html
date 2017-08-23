@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta chartset="utf-8">
+		<title>ÉÁË¸µÄÐÄ</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				box-sizing: border-box;
+			}
+			.heart{
+				position:relative;
+				width:200px;
+				height:200px;
+				background-color:red;
+				margin:200px auto; 
+				animation: dong 3s infinite;
+			}
+			@-webkit-keyframes dong{
+	     	
+				from{
+					transform: rotate(45deg) scale(0.1);opacity:1;
+				}
+
+				to{
+					transform: rotate(45deg) scale(1);
+					opacity: 0;
+				}
+
+			}
+			.heart:before,.heart:after{
+				position:absolute;
+				content:'';
+				width:200px;
+				height:200px;
+				display:block;
+				border-radius:50%;
+				background-color:red; 
+			}
+			.heart:before{
+				left:-100px;
+				bottom:0;
+			}
+			.heart:after{
+				top:-100px;
+				right:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heart"></div>
+	</body>
+</html>

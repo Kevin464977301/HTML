@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>幸运转盘抽奖</title>
+  <style>
+	.demo{
+		width:500px;
+		height:500px;
+		position:relative;
+		margin:50px auto
+		}
+	#disk{
+		width:500px;
+		height:500px;
+		background:url(choujiang/zhuanpan.png)no-repat
+		}
+	#start{
+		width；163px;
+		height:320px;
+		position:absolute;
+		top:0px;
+		left:0px;
+		}
+	#start img{
+			cursor:pointer
+			}
+  </style>
+  <style>
+  $(fuction(){
+			$("startbtn").rotate({
+					bind:{
+						click:function(){ //绑定click单击事件
+									var a = Math.floor(Math.random()*360); //生成随机数
+									$(this).rotate({
+												duration:3000, //转动时间间隔（转动速度）
+												angle:0, //开始角度
+									animateTo:3600+a, //转动角度，10圈+
+												easing: $.easing.easeOutSine, //动画扩展
+												callback:function(){ //回调函数
+													alert('中奖了！');
+												}
+									});
+							}
+						}
+				});
+			});
+ </style>	
+ </head>
+ <body>
+	<div class="demo">
+		<div id="disk"><img src="choujiang/zhuanpan.png" id=""></div>
+		<div id="start"><img src="choujiang/zhizhen.png" id="startbtn" /></div>
+	</div>
+ </body>
+</html>
